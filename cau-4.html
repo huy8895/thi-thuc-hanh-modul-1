@@ -22,7 +22,7 @@
         this.setColor = function (hexColor) {
             this.color = hexColor;
         }
-        this.drawCircle = function (contextObj) {
+        this.render = function (contextObj) {
             contextObj.beginPath();
             contextObj.arc (this.x,this.y,this.radius,0,2*Math.PI);
             contextObj.fill();
@@ -34,7 +34,7 @@
     circle.setY(10);
     circle.setRadius(100);
     circle.setColor('#000000');
-    circle.drawCircle(ctx);
+    circle.render(ctx);
 
 </script>
 </body>
