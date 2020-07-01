@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau 2</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arrInt,x) {
+        let isExist = false;
+        for (let i = 0; i < arrInt.length; i ++){
+            if (arrInt[i] == x){
+                for (let j = i; j < arrInt.length; j ++ ){
+                    arrInt[j] = arrInt[j + 1];
+                }
+                arrInt.length --;
+            }
+        }
+        return arrInt;
+    }
+</script>
+</body>
+</html>
