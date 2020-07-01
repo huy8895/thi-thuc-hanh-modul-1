@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>cau 4</title>
 </head>
 <body>
+<canvas id="myCanvas"></canvas>
+<script>
+    let canvas = document.getElementById('myCanvas')
+    let ctx = canvas.getContext('2d');
+    function Circle() {
+        this.setX = function (x) {
+            this.x = x;
+        }
+        this.setY = function (y) {
+            this.y = y;
+        }
+        this.setRadius = function (radius) {
+            this.radius = radius;
+        }
+        this.setColor = function (hexColor) {
+            this.color = hexColor;
+        }
+        this.drawCircle = function (contextObj) {
+            contextObj.beginPath();
+            contextObj.arc (this.x,this.y,this.radius,0,2*Math.PI);
+            contextObj.fill();
+        }
+    }
 
+    let circle = new Circle();
+    circle.setX(10);
+    circle.setY(10);
+    circle.setRadius(100);
+    circle.setColor('#000000');
+    circle.drawCircle(ctx);
+
+</script>
 </body>
 </html>

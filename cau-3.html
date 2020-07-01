@@ -8,13 +8,13 @@
 <script>
     function isFibonacci(int) {
         let isExit = false;
-        let a = 0;
-        let b = 1;
+        let number1 = 0;
+        let number2 = 1;
         for (let i = 0; i < int; i ++){
-            let c = a + b;
-            a = b;
-            b = c;
-            if (int === c){
+            let number3 = number1 + number2;
+            number1 = number2;
+            number2 = number3;
+            if (int === number3){
                 isExit = true;
             }
         }
